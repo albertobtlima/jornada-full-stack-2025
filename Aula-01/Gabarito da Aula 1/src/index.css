@@ -280,3 +280,30 @@ img {
 .song-list__see-more:hover {
   text-decoration: underline;
 }
+
+/* Song */
+
+.song {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  flex: 1;
+}
+
+.song__container {
+  margin: 0 20px;
+  border-top-right-radius: 15px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--green-800),
+    var(--green-950)
+  );
+  border-top-left-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.song__image-container {
+  box-shadow: 0 0 25px 10px var(--green-1000-25);
+}
