@@ -4,10 +4,10 @@ const Main = () => {
   return (
     <div className="main">
       {/* ItemList de Artistas */}
-      <ItemList />
+      <ItemList title="Artistas" items={5} />
 
       {/* ItemList de Músicas */}
-      <ItemList />
+      <ItemList title="Músicas" items={10} />
     </div>
   );
 };

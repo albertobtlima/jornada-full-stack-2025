@@ -1,24 +1,30 @@
+import PropTypes from "prop-types";
 import SingleItem from "./SingleItem";
 
-const ItemList = () => {
+const ItemList = ({ title, items }) => {
   return (
     <div className="item-list">
       <div className="item-list__header">
-        <h2>Artistas populares</h2>
+        <h2>{title} populares</h2>
         <a className="item-list__link" href="/">
           Mostrar tudo
         </a>
       </div>
 
       <div className="item-list__container">
-        <SingleItem />
-        <SingleItem />
-        <SingleItem />
-        <SingleItem />
-        <SingleItem />
+        {Array(items)
+          .fill()
+          .map((_, index) => (
+            <SingleItem key={`${title}-${index}`} />
+          ))}
       </div>
     </div>
   );
+};
+
+ItemList.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.number.isRequired,
 };
 
 export default ItemList;
