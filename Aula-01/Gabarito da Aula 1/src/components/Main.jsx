@@ -11,6 +11,7 @@ const Main = () => {
         items={5}
         itemsArray={artistArray}
         path="/artists"
+        idPath="/artist"
       />
 
       {/* ItemList de Músicas */}
@@ -19,6 +20,7 @@ const Main = () => {
         items={20}
         itemsArray={songsArray}
         path="/songs"
+        idPath="/song"
       />
     </div>
   );

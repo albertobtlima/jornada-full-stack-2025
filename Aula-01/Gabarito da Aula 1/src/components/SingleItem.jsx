@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const SingleItem = ({ name, image, artist }) => {
+const SingleItem = ({ id, name, image, artist, idPath }) => {
   return (
-    <a href="/" className="single-item">
+    <Link to={`${idPath}/${id}`} className="single-item">
       <div className="single-item__div-image-button">
         <div className="single-item__div-image">
           <img
@@ -23,14 +24,16 @@ const SingleItem = ({ name, image, artist }) => {
         </div>
         <p className="single-item__type">{artist ?? "Artista"}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 
 SingleItem.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   artist: PropTypes.string.isRequired,
+  idPath: PropTypes.string.isRequired,
 };
 
 export default SingleItem;
