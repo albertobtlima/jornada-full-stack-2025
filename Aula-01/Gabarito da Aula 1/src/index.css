@@ -1,5 +1,3 @@
-/* Variaveis */
-
 :root {
   --green-50: hsl(141deg 75% 90%);
   --green-100: hsl(141deg 75% 85%);
@@ -24,10 +22,10 @@
 }
 
 /* Reset */
-
+/* Seletor Universal */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -54,7 +52,7 @@ img {
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  min-height: 100svh;
 }
 
 /* Header */
@@ -63,7 +61,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 
 /* Main */
@@ -170,8 +168,8 @@ img {
 .single-item__icon {
   position: absolute;
   font-size: 50px;
-  right: 7.5;
-  bottom: 7.5;
+  right: 7.5px;
+  bottom: 7.5px;
   color: var(--green-400);
   opacity: 0;
   transform: translateY(100%);

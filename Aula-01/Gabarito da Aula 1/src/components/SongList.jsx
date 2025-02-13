@@ -1,17 +1,26 @@
 import SongItem from "./SongItem";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const SongList = ({ songsArray }) => {
+  //let items = 5;
+  const [items, setItems] = useState(5);
+
   return (
     <div className="song-list">
-      {songsArray.map((currentSongObj, index) => (
-        <SongItem {...currentSongObj} key={index} index={index}/>
-      ))}
-
-      <SongItem />
-      <SongItem />
-
-      <p className="song-list__see-more">Ver mais</p>
+      {songsArray
+        .filter((_, index) => index < items)
+        .map((currentSongObj, index) => (
+          <SongItem {...currentSongObj} key={index} index={index} />
+        ))}
+      <p
+        className="song-list__see-more"
+        onClick={() => {
+          setItems(items + 5);
+        }}
+      >
+        Ver mais
+      </p>
     </div>
   );
 };
