@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const SongItem = ({ image, name, duration, id, index }) => {
   return (
-    <Link to={`/song/1${id}`} className="song-item">
+    <Link to={`/song/${id}`} className="song-item">
       <div className="song-item__number-album">
         <p>{index + 1}</p>
 
@@ -13,6 +13,7 @@ const SongItem = ({ image, name, duration, id, index }) => {
             alt={`Imagem da Música ${name}`}
             className="song-item__image"
           />
+
           <p className="song-item__name">{name}</p>
         </div>
       </div>

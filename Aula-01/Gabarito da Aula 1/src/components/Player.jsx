@@ -7,11 +7,11 @@ import {
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Player = ({ duration }) => {
+const Player = ({ duration, randomIdFromArtist, randomId2FromArtist }) => {
   return (
     <div className="player">
       <div className="player__controllers">
-        <Link to="/song/1">
+        <Link to={`/song/${randomIdFromArtist}`}>
           <FontAwesomeIcon className="player__icon" icon={faBackwardStep} />
         </Link>
 
@@ -20,7 +20,7 @@ const Player = ({ duration }) => {
           icon={faCirclePlay}
         />
 
-        <Link to="/song/3">
+        <Link to={`/song/${randomId2FromArtist}`}>
           <FontAwesomeIcon className="player__icon" icon={faForwardStep} />
         </Link>
       </div>
@@ -40,6 +40,8 @@ const Player = ({ duration }) => {
 
 Player.propTypes = {
   duration: PropTypes,
+  randomIdFromArtist: PropTypes,
+  randomId2FromArtist: PropTypes,
 };
 
 export default Player;

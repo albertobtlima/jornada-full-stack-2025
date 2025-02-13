@@ -7,8 +7,9 @@ import SongList from "../components/SongList";
 
 const Artist = () => {
   const { id } = useParams();
+  // console.log(useParams());
 
-  const {name, banner} = artistArray.filter(
+  const { name, banner } = artistArray.filter(
     (currentArtistObj) => currentArtistObj.id === Number(id)
   )[0];
 
@@ -19,17 +20,20 @@ const Artist = () => {
   const randomIndex = Math.floor(
     Math.random() * (songsArrayFromArtist.length - 1)
   );
-
   const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
 
-  //console.log(songsArrayFromArtist);
+  // console.log(randomIdFromArtist);
+  // console.log(Math.floor(Math.random() * (songsArrayFromArtist.length - 1)));
+  // console.log("Tamanho do Array:" + songsArrayFromArtist.length);
+
+  // console.log(songsArrayFromArtist);
 
   return (
     <div className="artist">
       <div
         className="artist__header"
         style={{
-          backgroundImage: `linear-gradient(to bottom, var(--_shade), var(--_shade)), url(${banner})`,
+          backgroundImage: `linear-gradient(to bottom, var(--_shade), var(--_shade)),url(${banner})`,
         }}
       >
         <h2 className="artist__title">{name}</h2>
