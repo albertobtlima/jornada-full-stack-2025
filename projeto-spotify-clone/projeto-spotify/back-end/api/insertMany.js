@@ -25,5 +25,5 @@ const responseSongs = await database
 
 // console.log(newArtistArray);
 // console.log(newSongsArray);
-console.log(responseArtists);
-console.log(responseSongs);
+// console.log(responseArtists);
+// console.log(responseSongs);

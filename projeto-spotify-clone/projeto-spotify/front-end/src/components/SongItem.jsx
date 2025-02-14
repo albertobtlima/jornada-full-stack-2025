@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const SongItem = ({ image, name, duration, id, index }) => {
+const SongItem = ({ image, name, duration, _id, index }) => {
   return (
-    <Link to={`/song/${id}`} className="song-item">
+    <Link to={`/song/${_id}`} className="song-item">
       <div className="song-item__number-album">
         <p>{index + 1}</p>
 
@@ -24,7 +24,7 @@ const SongItem = ({ image, name, duration, id, index }) => {
 };
 
 SongItem.propTypes = {
-  id: PropTypes,
+  _id: PropTypes,
   index: PropTypes,
   name: PropTypes,
   image: PropTypes,
